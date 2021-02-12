@@ -19,13 +19,117 @@
     font-size: 1rem;
     font-weight: bold;
 }
-#recipe_name{
+.recipe_name{
     font-family: 'Sawarabi Mincho',sans-serif;
     font-size: 2rem;
-    color: white;
+    color: rgb(255, 255, 255);
     position: relative;
     top: 150px;
     margin-left: 50px;
+    transition-property: top,margin-right,left;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+    animation-name: invisible;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+@keyframes invisible{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.recipe_name.active{
+    font-family: 'Sawarabi Mincho',sans-serif;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 250px;
+    margin-right: 50px;
+    left:800px;
+    opacity: 0;
+    animation-name: visible;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+@keyframes visible{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.steps{
+    font-family: 'Sawarabi Mincho',sans-serif;
+    color: black;
+    position: relative;
+    top: 230px;
+    max-width: fit-content;
+    margin-left: 50px;
+    transition-property: top,margin-right,left;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+    animation-name: invisible;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    margin-left: 10px;
+    padding: 0;
+}
+.heading{
+    font-size: 2rem;
+}
+.info{
+    font-size: 1rem;
+    font-family:'Sawarabi Mincho',sans-serif;
+}
+.lni-checkmark-circle{
+    position: relative;
+    top: 3px;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: 'Sawarabi Mincho',sans-serif;
+    position: relative;
+    top: 160px;
+    margin-left:50px ;
+    transition-property: top,margin-right,left;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+    animation-name: invisible;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+.details.active{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: 'Sawarabi Mincho',sans-serif;
+    position: relative;
+    top: 30px;
+    margin-right:50px ;
+    left:800px;
+    opacity: 0;
+    animation-name: visible;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+.description{
+    font-family: 'Sawarabi Mincho',sans-serif;
+    position: relative;
+    top: 170px;
+    margin-left:50px ;
+    color: white;
+    opacity: 0;
+    animation-name: invisible;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+.description.active{
+    visibility: hidden;
 }
 .header_text:hover{
     color: #E9967A;
@@ -41,14 +145,13 @@ body{
     position: relative;
     bottom: 10px;
     cursor: pointer;
+    transition-property:all;
+    transition-timing-function:step-end;
 }
 .lni:hover{
   color: #E9967A;
 }
-.icons{
-    padding: 0;
-    margin: 0;
-}
+
 .recipes{
     display: flex;
     flex-direction: row;
@@ -56,28 +159,23 @@ body{
     color: white;
     font-family: 'Sawarabi Mincho',sans-serif;
     font-size: 1rem;
-    position: relative;
+    position: relative;    
     top:40px;
     line-height: 1;
+    opacity: 0;
+    animation-name: invisible;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
 }
 .previous{
     margin-left: 50px;
 }
-.details{
-    display: flex;
-    flex-direction: row;
-    color: white;
-    font-family: 'Sawarabi Mincho',sans-serif;
-    position: relative;
-    top: 160px;
-    margin-left:50px ;
+.next{
+    margin-right: 50px;
 }
-.description{
-    font-family: 'Sawarabi Mincho',sans-serif;
-    position: relative;
-    top: 170px;
-    margin-left:50px ;
-    color: white;
+.steps.invisible{
+    visibility: hidden;
 }
 .instructions{
     position: relative;
@@ -105,66 +203,8 @@ body{
     position: relative;
     bottom: 7px;
 }
-.next{
-    margin-right: 50px;
-}
-.links{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    list-style: none;
-}
-.items{
-    position: relative;
-    margin-right: 50px;
-    text-align: center;
-    top:5px;
-}
-.anchors{
-    color: white;
-    font-family: 'Sawarabi Mincho',cursive;
-    font-size: 1rem;
-}
-.anchors:hover{
-    color: #E9967A;
-}
-.icon { 
-    padding: 10px; 
-    min-width: 40px;
-    position: relative;
-    top: 42px;
-    left: 520px; 
-} 
-.toggle{
-    color: white;
-    position: relative;
-    right:10px;
-    top: 5px;
-}
-.fas:hover{
-    cursor: pointer;
-    color: #E9967A;
-}
-nav a{
-    text-decoration: none;
-}
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px;
-    background-color: black;
-}
-
-.split{
-   position: absolute;
-   width: 50%;
-   height: 100%;
-   overflow: hidden; 
-}
-.split.left{
-    left: 0;
+.next.active{
+    visibility: hidden;
 }
 .cont{
     position: relative;
@@ -175,12 +215,59 @@ nav{
     background-color: white;
     height: 100vh;
     width: 100vw;
+    transition-property: height, border-bottom-left-radius,border-bottom-right-radius;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
 }
-.custom-shape-divider-bottom-1612965018 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+
+.cont.active{
+    position: relative;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/mae-mu-kID9sxbJ3BQ-unsplash.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: white;
+    height: 70vh;
+    width: 100vw;
+    border-bottom-left-radius: 50%;
+}
+.lni-chevron-down{
+    width: 0px;
+    position: relative;
+    left: 49%;
+}
+.instructions.active{
+    visibility: hidden;
+}
+.lni-chevron-down:hover{
+    animation-name: pointDown;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+@keyframes pointDown{
+    0%{top:0px;}
+    25%{bottom: 20px;}
+    50%{bottom: 10px;}
+    75%{bottom: 5px;}
+    100%{bottom: 0px;}
+}
+.lni-arrow-right:hover{
+  animation-name: ripple;
+  animation-iteration-count: infinite;
+  animation-duration:1s ;
+  animation-timing-function: ease-in;
+}
+.lni-arrow-left:hover{
+    animation-name: ripple;
+    animation-iteration-count: infinite;
+    animation-duration:1s ;
+    animation-timing-function: ease-in;
+  }
+@keyframes ripple{
+    0%{color: #E9967A;}
+    25%{color: white;}
+    50%{color:#E9967A;}
+    75%{color: white;}
+    100%{color:#E9967A;}
 }
