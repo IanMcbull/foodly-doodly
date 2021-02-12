@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Sawarabi+Mincho&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+.header_text{
+    font-family: 'Sacramento',sans-serif;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:burlywood;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    top:10px;
+    left:10px;
+}
+.warning{
+    font-family: 'Sawarabi Mincho',sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#recipe_name{
+    font-family: 'Sawarabi Mincho',sans-serif;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    top: 150px;
+    margin-left: 50px;
+}
+.header_text:hover{
+    color: #E9967A;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    margin:0;
+}
+.lni{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 10px;
+    cursor: pointer;
+}
+.lni:hover{
+  color: #E9967A;
+}
+.icons{
+    padding: 0;
+    margin: 0;
+}
+.recipes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Sawarabi Mincho',sans-serif;
+    font-size: 1rem;
+    position: relative;
+    top:40px;
+    line-height: 1;
+}
+.previous{
+    margin-left: 50px;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: 'Sawarabi Mincho',sans-serif;
+    position: relative;
+    top: 160px;
+    margin-left:50px ;
+}
+.description{
+    font-family: 'Sawarabi Mincho',sans-serif;
+    position: relative;
+    top: 170px;
+    margin-left:50px ;
+    color: white;
+}
+.instructions{
+    position: relative;
+    top: 200px;
+    font-family: 'Sawarabi Mincho',sans-serif;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+#time{
+    margin-right: 10px;
+    padding: 0;
+    position: relative;
+    bottom: 7px;
+}
+.lni-minus{
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+#servings{
+    margin-left: 10px;
+    padding: 0;
+    position: relative;
+    bottom: 7px;
+}
+.next{
+    margin-right: 50px;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    list-style: none;
+}
+.items{
+    position: relative;
+    margin-right: 50px;
+    text-align: center;
+    top:5px;
+}
+.anchors{
+    color: white;
+    font-family: 'Sawarabi Mincho',cursive;
+    font-size: 1rem;
+}
+.anchors:hover{
+    color: #E9967A;
+}
+.icon { 
+    padding: 10px; 
+    min-width: 40px;
+    position: relative;
+    top: 42px;
+    left: 520px; 
+} 
+.toggle{
+    color: white;
+    position: relative;
+    right:10px;
+    top: 5px;
+}
+.fas:hover{
+    cursor: pointer;
+    color: #E9967A;
+}
+nav a{
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+}
+
+.split{
+   position: absolute;
+   width: 50%;
+   height: 100%;
+   overflow: hidden; 
+}
+.split.left{
+    left: 0;
+}
+.cont{
+    position: relative;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/mae-mu-kID9sxbJ3BQ-unsplash.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+.custom-shape-divider-bottom-1612965018 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
