@@ -19,7 +19,7 @@
         <div class="landing-page-image">
           <v-img
             src="@/assets/images/landing-page-image.png"
-            aspect-ratio="1"
+            :aspect-ratio="16/16"
             class="landing-image"
           ></v-img>
         </div>
