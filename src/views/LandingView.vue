@@ -16,7 +16,13 @@
           </p>
           <v-btn color="#ffc044" max-width="200">GET STARTED</v-btn>
         </div>
-        <div class="landing-page-image"></div>
+        <div class="landing-page-image">
+          <v-img
+            src="@/assets/images/landing-page-image.png"
+            aspect-ratio="1"
+            class="landing-image"
+          ></v-img>
+        </div>
       </div>
     </v-container>
   </v-app>
@@ -40,6 +46,10 @@ export default {
   height: 80vh;
   display: flex;
 }
+.landing-page-image {
+  width: 50%;
+  display: flex;
+}
 .landing-page-pitch {
   width: 50%;
   align-self: center;
@@ -52,7 +62,10 @@ export default {
   font-size: 3rem;
   font-family: contentHeaderFont;
 }
-.landing-page-pitch > p{
+.landing-page-pitch > p {
   text-align: justify;
+}
+.landing-image{
+  align-self: flex-end;
 }
 </style>
