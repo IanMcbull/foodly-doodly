@@ -1,4 +1,4 @@
 # foodly-doodly
 
 ### About
-Foodly doodly is a food blogging plartform like no other. 
+Do you love cooking, and discovering new recipes? Then foodly doodly is where it's at.
