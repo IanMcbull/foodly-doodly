@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <navigation-bar />
-    <v-container>
+    <!-- <v-container>
       <div class="content">
         <div class="landing-page-pitch">
           <h1>Recipes for any occasion right at your fingertips</h1>
@@ -14,7 +14,9 @@
             voluptatum unde neque tempore dolores placeat blanditiis incidunt
             animi.
           </p>
-          <v-btn color="#ffc044" max-width="200">GET STARTED</v-btn>
+          <v-btn color="#ffc044" max-width="200" @click="registerUser()"
+            >GET STARTED</v-btn
+          >
         </div>
         <div class="landing-page-image">
           <v-img
@@ -24,7 +26,7 @@
           ></v-img>
         </div>
       </div>
-    </v-container>
+    </v-container> -->
   </v-app>
 </template>
 
@@ -35,7 +37,12 @@ export default {
   components: {
     NavigationBar,
   },
-};
+  methods:{
+    registerUser(){
+      console.log("Register button pushed");
+    },
+  },
+  }
 </script>
 <style>
 @font-face {
